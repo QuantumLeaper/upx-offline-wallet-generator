@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>uPlexa Offline Wallet Generator Example</title>
+  </head>
+  <body>
+    <input class="btn orange" type="button" onclick="js:genwallet(null);" value="Generate New Wallet" />
+    <input type="text" value="" id="user_entropy_widget" oninput="js:checkEntropy();" hidden="hidden" />
+
+    <div class="card-action center-align container">
+      <h2>Mnemonic Seed:</h2>
+      <h5 class="grey-text text-darken-4" id="mnemonic_widget" style="background-color: #eee;">Generating...</h5>
+    </div>
+
+    <div style="color: #fff;">Public Address: (uPlexa Coins will be sent to this address)</div>
+    <textarea id="address_widget" class="form-control" name="upxAddress2" rows="4" cols="50" style="max-width: 500px;" disabled="disabled">Generating...</textarea>
+    <input type="text" name="upxAddress" hidden="hidden" id="address_widget2" class="address_widget" />
+
+    <h2>Spend key:</h2>
+    <pre id="spend_key_widget">Generating...</pre>
+
+    <h2>View Key:</h2>
+    <pre id="view_key_widget">Generating...</pre>
+
+    <input type="text" name="upxAddress" hidden="hidden" id="address_widget2" class="address_widget" />
+    <span class="qrcode" id="address_qr_widget" onclick="js:toggle_qr();"></span>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/generateWallet.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
